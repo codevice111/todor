@@ -4,8 +4,14 @@ import './App.css';
 import { Outlet } from 'react-router';
 
 function App() {
+
+  const testEnv = ()=> { 
+    console.log(`Environment: ${process.env.REACT_APP_ENV}`);
+    return(<></>)
+  }
+
   return (
-    <div className="App">
+    <div className="App">{testEnv()}
       <Outlet />
     </div>
   );
